@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/*navbar*/
+.mainAgenda{
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: 0.5s;
+}
+.navigation.active ~ .mainAgenda{
+  width: calc(100% - 80px);
+  left: 80px;
+}
+
+.topbar{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.toggle{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;   
+  cursor: pointer;
+}
+.search{
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+}
+.search label{
+  position: relative;
+  width: 100%;
+}
+.search label input{
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  padding: 5px 20px;
+  padding-left: 35px;
+  font-size: 18px;
+  outline: none;
+  border: 1px solid var(--black2);
+}
+.search label .fas{
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 1.2em;
+}
+.user{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.user img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*     Agenda */
+.agenda{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 30px;
+    height: 725px;
+}
+.agenda .tituloAgenda{
+    top: 60px;
+    position: relative;
+    height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+.titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.titulo h2{
+    font-weight: 600;
+    color: var(--bule);
+}
+
+.agenda .titulo{
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+  }
+  .titulo .icons{
+    display: flex;
+  }
+  .titulo .icons span{
+    height: 38px;
+    width: 38px;
+    margin: 0 1px;
+    cursor: pointer;
+    color: #878787;
+    text-align: center;
+    line-height: 38px;
+    font-size: 1.9rem;
+    user-select: none;
+    border-radius: 50%;
+  }
+  .agenda .table table{
+    width: 100%;
+  }
+  .icons span:last-child{
+    margin-right: -10px;
+  }
+  .titulo .icons span:hover{
+    background: #f2f2f2;
+  }
+  .titulo .current-date{
+    font-size: 1.45rem;
+    font-weight: 500;
+  }
+  
+  .calendar ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+  }
+  .calendar .days{
+    margin-bottom: 20px;
+  }
+  .calendar li{
+    color: #333;
+    width: calc(100% / 7);
+    font-size: 1.07rem;
+  }
+  .calendar .weeks li{
+    font-weight: 500;
+    cursor: default;
+  }
+  .calendar .days li{
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+  }
+  .days li.inactive{
+    color: #aaa;
+  }
+  .days li.active{
+    color: #fff;
+  }
+  .days li::before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .days li.active::before{
+    background: #1488CC;
+  }
+  .days li:not(.active):hover::before{
+    background: #6DD5ED;
+  }
+
+/* Lista de clientes */
+
+
+.recentCustomers{
+    position: relative;
+    min-height: 500px;
+    padding: 20px;
+    margin-bottom: -50px;
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+.recentCustomers .cardHeader{
+  padding-bottom: 25px;
+  width: 100%;
+  height: 50px;
+}
+.recentCustomers .mensaje{
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  width: 100%;
+  height: 100%;
+}
+.mensaje h2{
+  font-weight: 100px;
+}
+.table{
+    overflow-y: scroll;
+    height: 400hv;
+}
+
+.recentCustomers table{
+    overflow-y: scroll;
+}
+.recentCustomers table tr:hover{
+    background: #1488CC;
+    color: var(--white);
+}
+.recentCustomers table tr td{
+    padding: 12px 10px;
+}
+.recentCustomers table tr td a{
+  text-decoration: none;
+}
+.recentCustomers table tr td h4{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+.recentCustomers table tr:hover{
+    background: #1488CC;
+    color: #fff;
+}
+
+
+
+@media (max-width:768px){
+  .navigation{
+    width: 80px;
+  }
+  .navigation.active{
+      width: 300px;
+      left: 0;
+  } 
+  .mainAgenda{
+    width: calc(100% - 80px);
+    left: 80px;
+  }
+ 
+  .mainAgenda.active{
+    width: 100%;
+    left: 80px;
+  }
+  .topbar{
+    width: 100%;
+  }
+  .navigation.active ~ .mainAgenda{
+    overflow: hidden;
+    left: 300px;
+  }
+  .agenda{
+      grid-template-columns: repeat(1,1fr);
+  }
+  .cardBox{
+      grid-template-columns: repeat(1, 1fr);
+  }
+  .recentOrders{
+      overflow-x: auto;
+  }
+  .status.inprogress{
+      white-space: nowrap;
+  }
+}

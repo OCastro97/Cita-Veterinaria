@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Happy Pets</title>
+    <link rel="icon" href="../../img/icon.png">
+
+    <link rel="stylesheet" href="../css/log/login.css">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="img">
+            <img src="../img/dog (1).png">
+        </div>
+    
+        <div class="form_Login">
+            <form action="../php/recuperarPass.php" method="POST">
+                <img src="../img/icon.jpg" class="avatar">
+
+                <h2>Recuperar contraseña</h2>
+
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div>
+                        <h5>Email</h5>
+                        <input type="text" class="input" name="email" required>
+                    </div>
+                </div>
+
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div>
+                        <h5>Nueva Contraseña</h5>
+                        <input type="password" class="input" name="passverficar1" required>
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div>
+                        <h5>Vuelve Contraseña</h5>
+                        <input type="password" class="input" name="passverficar2" required>
+                    </div>
+                </div>
+                <!-- <a href="./login.html">Regresar a Login</a> -->
+                <input type="submit" class="btn" value="Recuperar">
+                Iniciar sesión <a href="./login.html">Volver</a>
+            </form>
+        </div>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+</html>

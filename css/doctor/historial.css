@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/*navbar*/
+.mainHistorial{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+  }
+  .navigation.active ~ .mainHistorial{
+    width: calc(100% - 80px);
+    left: 80px;
+  }
+  
+  .topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+  .toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;   
+    cursor: pointer;
+  }
+  .buscador{
+    margin-top: 20px;
+  }
+  .search{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+  }
+  .search label{
+    position: relative;
+    width: 100%;
+  }
+  .search label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid var(--black2);
+  }
+  .search label .fas{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 1.2em;
+  }
+  .user{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /*******************secion historial****************************/
+.historial{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    grid-gap: 30px;
+    height: 725px;
+}
+.historial .tituloHistorial{
+    position: relative;
+    /* display: grid; */
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+.titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.titulo h2{
+    font-weight: 600;
+    color: var(--bule);
+}
+.btn{
+    position: relative;
+    padding: 5px 10px;
+    background: var(--bule);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+}
+.historial .table{
+    overflow-y: scroll;
+    height: 400hv;
+    /* margin-top: -10px; */
+}
+.historial table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    overflow: scroll;
+}
+table .sticky-title tr{
+    position: sticky;
+}
+.historial table thead td{
+    font-weight: 600;
+}
+.historial table thead .sticky{
+    position: sticky;
+}
+.historial .tituloHistorial table tr{
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.historial .tituloHistorial table tr:last-child{
+    border-bottom: none;
+}
+.historial .tituloHistorial table tr:hover{
+    background: #1795ce;
+    color: #fff;
+    cursor: pointer;
+}
+.historial .tituloHistorial table tr td{
+    padding: 10px;
+}
+.historial .tituloHistorial table tr td a{
+    text-decoration: none;
+}
+.historial .tituloHistorial table tr td:last-child{
+    text-align: center;
+}
+.historial .tituloHistorial table tr td:first-child{
+    text-align: center;
+}
+.historial .tituloHistorial table tr td:nth-child(2){
+    text-align: center;
+}
+.historial .tituloHistorial table tr td:nth-child(3){
+    text-align: center;
+}
+.historial .tituloHistorial table tr td:nth-child(4){
+    text-align: center;
+}
+.historial .tituloHistorial table tr td:nth-child(5){
+    text-align: center;
+}
+.historial .tituloHistorial table tr td:nth-child(6){
+    text-align: center;
+}
+.historial .tituloHistorial table tr td:nth-child(7){
+    text-align: center;
+}
+.status.atendido{
+    padding: 2px 4px;
+    background: #8de02c;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.status.noatendido{
+    padding: 2px 4px;
+    background: #f00;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+@media (max-width:768px){
+    .navigation{
+      width: 80px;
+    }
+    .navigation.active{
+        width: 300px;
+        left: 0;
+    } 
+    .mainHistorial{
+      width: calc(100% - 80px);
+      left: 80px;
+    }
+   
+    .mainHistorial.active{
+      width: 100%;
+      left: 80px;
+    }
+    .topbar{
+      width: 100%;
+    }
+    .navigation.active ~ .mainHistorial{
+      overflow: hidden;
+      left: 300px;
+    }
+  }

@@ -1,0 +1,320 @@
+/* CONTENT */
+#contentInfo {
+	position: relative;
+	width: calc(100% - 280px);
+	left: 280px;
+	transition: .3s ease;
+    height: 100%;
+}
+#sidebar.hide ~ #contentInfo {
+	width: calc(100% - 60px);
+	left: 60px;
+}
+
+/* NAVBAR */
+
+#contentInfo .navbar {
+	height: 80px;
+	background: var(--light);
+	padding: 0 24px;
+	padding: 20px;
+	box-sizing: border-box;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--lato);
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+#contentInfo .navbar::before {
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	bottom: -40px;
+	left: 0;
+	border-radius: 50%;
+	box-shadow: -20px -20px 0 var(--light);
+}
+nav .navbar{
+	width: 100%;
+	grid-template-columns: repeat(2, 2fr);
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	height: 36px;
+}
+#contentInfo i{
+	justify-content: center;
+}
+#contentInfo nav a {
+	color: var(--dark);
+}
+#contentInfo nav .navbar .user{
+    width: 100%;
+	justify-content: end;
+	display: flex;
+	position: unset;
+}
+#contentInfo nav .notification {
+	font-size: 20px;
+	position: relative;
+	margin-top: 10px;
+}
+#contentInfo nav .notification .num {
+	position: absolute;
+	top: -6px;
+	right: -6px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid var(--light);
+	background: var(--red);
+	color: var(--light);
+	font-weight: 700;
+	font-size: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#contentInfo nav .user .profile{
+	display: flex;
+	padding-left: 25px;
+	height: 36px;
+	align-items: center;
+	font-weight:750;
+}
+
+#contentInfo nav .navbar .profile img {
+	width: 36px;
+	height: 36px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+/* NAVBAR */
+
+
+.content-data-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-data-info .contenedor-info{
+    position: relative;
+    max-width: 850px;
+    width: 100%;
+    border-radius: 4px;
+    padding: 30px;
+    margin: 0 10px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.contenedor-info header{
+    position: relative;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+.contenedor-info header::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: #618f9d;
+}
+.contenedor-info form{
+    position: relative;
+    margin-top: 13px;
+    min-height: 550px;
+    background-color: #f2f2f2;
+    overflow: hidden;
+}
+.contenedor-info form .form{
+    position: absolute;
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+.contenedor-info form .form.second{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+form.secActive .form.second{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+form.secActive .form.first-info{
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
+.contenedor-info form .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+.contenedor-info form .field-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+form .field-info .input-field-info{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 4px 0;
+}
+.input-field-info label{
+    font-size: 14px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.input-field-info input{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field-info .vacuna{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    /* border: 1px solid #aaa; */
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+    align-items: center;
+    justify-content: center;
+}
+.vacuna label{
+    font-size: 14px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+.vacuna input{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field-info select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+.input-field-info input:is(:focus, :valid){
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+.input-field-info input[type="date"]{
+    color:#707070;
+}
+.input-field-info input[type="date"]:valid{
+    color: #333;
+}
+
+.contenedor-info form button, .backBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 1px 0;
+    background-color: #4050f4;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.contenedor-info form button,
+.contenedor-info form button .backBtn{
+    font-size: 16px;
+    font-weight: 400;
+}
+form button:hover{
+    background-color: #265df2;
+}
+form button i,
+form .backBtn i{
+    margin: 0 6px;
+}
+form .backBtn i{
+    transform: rotate(180deg);
+}
+form .buttons{
+    display: flex;
+    align-items: center;
+}
+form .buttons button, .backBtn{
+    margin-right: 14px;
+}
+
+@media screen and (max-width: 768px) {
+	#sidebar {
+		width: 200px;
+	}
+
+	#contentInfo {
+		width: calc(100% - 60px);
+		left: 200px;
+	}
+
+	#contentInfo nav{
+		display: flex;
+	}
+	nav .navbar{
+		width: 100%;
+	}
+}
+
+
+@media (max-width: 750px){
+    .cuerpo{
+        padding-left: 20vh;
+    }
+    .contenedor-info form{
+        overflow-y: scroll;
+    }
+    .contenedor-info form::-webkit-scrollbar{
+        display: none;
+    }
+    form .field-info .input-field-info{
+        width: calc(100% / 2 - 15px);
+    }
+}
+
+@media (max-width:550px){
+    form .field-info .input-field-info{
+        width: 100%;
+    }
+}
